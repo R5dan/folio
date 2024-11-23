@@ -29,4 +29,3 @@ A portfolio manager built with T3 Stack.
 - [ ] PostHog
 - [x] UploadThing
 - [ ] Drizzle ORM
--
