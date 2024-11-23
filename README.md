@@ -25,7 +25,7 @@ A portfolio manager built with T3 Stack.
 
 ### 3rd Party
 
-- [] Clerk
+- [ ] Clerk
 - [ ] PostHog
 - [x] UploadThing
 - [ ] Drizzle ORM
