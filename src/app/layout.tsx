@@ -1,13 +1,11 @@
 import "~/styles/globals.css";
-import { GeistSans } from "geist/font/sans";
+
+
 import { type Metadata } from "next";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+import { ClerkProvider } from "@clerk/nextjs";
+import { TopNav } from "./_components/topnav";
+import { GeistSans } from "geist/font/sans";
+
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -20,21 +18,16 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-        <html lang="en" className={`${GeistSans.variable}`}>
-          <body>
-            <nav>
-              <SignedOut>
-                <SignInButton />
-              </SignedOut>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-            </nav>
-            <div>
-              {children}
-            </div>
-          </body>
+        <html lang="en" className={`dark ${GeistSans.variable}`}>
+            <body>
+              <div>
+                <TopNav/>
+              </div>
+              <div>
+                {children}
+              </div>
+            </body>
         </html>
-    </ClerkProvider>  
-);
+    </ClerkProvider>
+  );
 }
