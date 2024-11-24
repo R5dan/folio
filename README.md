@@ -5,6 +5,11 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 ## Description
 
 A portfolio manager built with T3 Stack.
+## UI
+
+- [ ] Table with data
+- [ ] Graph
+
 
 ## Features
 
@@ -13,8 +18,9 @@ A portfolio manager built with T3 Stack.
 ### Todo
 
 - [ ] Make it deploy
-- [ ] Scafolld UI
 - [ ] Add database (vercel postgres)
+- [ ] Add API
+- [ ] Scafolld UI
 - [ ] Add data
 - [ ] Automatically grab data
 - [ ] Add graph
