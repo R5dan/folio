@@ -18,7 +18,7 @@ A portfolio manager built with T3 Stack.
 ### Todo
 
 - [x] Make it deploy
-- [ ] Add database (vercel postgres)
+- [x] Add database (vercel postgres)
 - [ ] Add API
 - [ ] Scafolld UI
 - [ ] Add data
