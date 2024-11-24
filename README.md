@@ -17,7 +17,7 @@ A portfolio manager built with T3 Stack.
 
 ### Todo
 
-- [ ] Make it deploy
+- [x] Make it deploy
 - [ ] Add database (vercel postgres)
 - [ ] Add API
 - [ ] Scafolld UI
@@ -31,7 +31,9 @@ A portfolio manager built with T3 Stack.
 
 ### 3rd Party
 
-- [ ] Clerk
+- [x] Clerk
 - [ ] PostHog
 - [x] UploadThing
 - [ ] Drizzle ORM
+- [x] Sentry
+- [ ] Upstash
