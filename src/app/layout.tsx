@@ -18,9 +18,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-        <html lang="en" className={`dark ${GeistSans.variable}`}>
-            <body>
-              <div>
+        <html lang="en" className={`dark text-white font-bold ${GeistSans.variable}`}>
+            <body className="m-0 bg-black overflow-hidden">
+              <div className="flex ">
                 <TopNav/>
               </div>
               <div>

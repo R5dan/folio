@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div.topnav {
+    width: 6rem;
+    height: 2rem;
+    background-color: black;
+    text-align: center;
+}
+
+img.topnav {
+    width: 2rem;
+    height: 2rem;
+}
+
+div:hover.topnav {
+    scale: 1.25;
+    background-color: grey;
+}
+
+div:current.topnav {
+    background-color: white;
+}
