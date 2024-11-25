@@ -20,14 +20,17 @@ A portfolio manager built with T3 Stack.
 - [x] Make it deploy
 - [x] Add database (vercel postgres)
 - [ ] Add API
-- [ ] Scafolld UI
+- [x] Scafolld UI
 - [ ] Add data
 - [ ] Automatically grab data
 - [ ] Add graph
 - [ ] Add trades
-- [ ] Add authentication (w/ clerk)
+- [x] Add authentication (w/ clerk)
+- [ ] Change authentication (w/ nexauth.js) 
 - [ ] Add analytics (posthog)
 - [ ] Add suggestions
+- [ ] API Ratelimiting (upstash)
+
 
 ### 3rd Party
 
