@@ -1,5 +1,5 @@
 import { promises } from "dns";
-import type { biggestChangeer, GLOBAL_QUOTE, NEWS_SENTIMENT } from "~/types/api/alphavantage";
+import type { biggestChanger, GLOBAL_QUOTE, NEWS_SENTIMENT } from "~/types/api/alphavantage";
 
 const apiKey = process.env.ALPHAVANTAGE_API_KEY;
 
@@ -10,10 +10,9 @@ export async function getRealtimeTicker(ticker: string):Promise<GLOBAL_QUOTE> {
     return await response.json();
 }
 
-export async function getBiggestChangers():Promise<biggestChangeer> {
+export async function getBiggestChangers():Promise<biggestChanger> {
     const url = `https://www.alphavantage.co/query?function=TOP_GAINERS_LOSERS&apikey=${apiKey}`;
     const response = await fetch(url);
-    console.log(response.json());
     return await response.json();
 }
 

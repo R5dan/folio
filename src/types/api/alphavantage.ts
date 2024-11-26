@@ -40,28 +40,18 @@ export  type NEWS_SENTIMENT = {
     }[];
 }
 
-export type biggestChangeer = {
+export type company = {
+    "ticker":string;
+    "price":string;
+    "change_amount":string;
+    "change_percent":string;
+    "volume":string;
+}
+
+export type biggestChanger = {
     "metadata":string;
     "last_updated":string;
-    "top_gainers":{
-        "ticker":string;
-        "price":string;
-        "change_amount":string;
-        "change_percent":string;
-        "volume":string;
-    }[];
-    "top_losers":{
-        "ticker":string;
-        "price":string;
-        "change_amount":string;
-        "change_percent":string;
-        "volume":string;
-    }[];
-    "most_actively_traded":{
-        "ticker":string;
-        "price":string;
-        "change_amount":string;
-        "change_percent":string;
-        "volume":string;
-    }[];
+    "top_gainers":company[];
+    "top_losers":company[];
+    "most_actively_traded":company[];
 }

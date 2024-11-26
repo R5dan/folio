@@ -4,6 +4,8 @@ import { pageData } from "./getData";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useEffect, useState } from 'react';
+import { news } from "~/types/api/yfinance";
+import { company } from "~/types/api/alphavantage";
 
 export default function Page() {
   const [data, setData] = useState({
@@ -27,24 +29,17 @@ export default function Page() {
     const intervalId = setInterval(() => {
       i += 1;
 
-      function getHTML(data: {
-        ticker: string;
-        price: string;
-        change_amount: string;
-        change_percentage: string;
-        volume: string;
-      }) {
+      function getHTML(data: company) {
         if (!data) return '';
         console.log(data);
         return (`
           <div>
             <span>${data.ticker}</span><br/>
-            <span>${data.change_percentage}</span>
+            <span>${data.change_percent}</span>
           </div>
         `);
       }
-      console.log("DATA", data);
-      const { articles ,biggestGainer, biggestLoser, mostActive } = data;
+      const { articles ,biggestGainer, biggestLoser, mostActive }:{articles:news[], biggestGainer:company[], biggestLoser:company[], mostActive:company[]} = data;
 
       if (biggestGainer.length && biggestLoser.length && mostActive.length) {
         document.getElementById("BG1")!.innerHTML = getHTML(biggestGainer[(i * 3) - 2]);
