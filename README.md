@@ -37,6 +37,6 @@ A portfolio manager built with T3 Stack.
 - [x] Clerk
 - [ ] PostHog
 - [x] UploadThing
-- [ ] Drizzle ORM
+- [x] Drizzle ORM
 - [x] Sentry
 - [ ] Upstash
