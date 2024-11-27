@@ -1,9 +1,9 @@
 import { getBiggestChangers } from "~/server/api/alphavantage";
 import { globalNews } from "~/server/api/yfinance"
-import type { biggestChanger } from "~/types/api/alphavantage";
+import type { biggestChanger, company } from "~/types/api/alphavantage";
+import { currentUser } from '@clerk/nextjs/server';
 
-
-let cache:{
+const cache:{
     data?:biggestChanger,
     timestamp:number
 } = {
@@ -12,6 +12,7 @@ let cache:{
 }
 
 export async function pageData() {
+    const user = await currentUser();
     const now = new Date().getTime()
     let biggestChangeer:biggestChanger
     if (cache.data && now - cache.timestamp < 24 * 60 * 60 * 1000) {
@@ -29,6 +30,7 @@ export async function pageData() {
         articles,
         biggestGainer,
         biggestLoser,
-        mostActive
+        mostActive,
+        user
     }
 }
